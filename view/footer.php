@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+    <header>
+        <style>
+            @import url(footer.css);
+        </style>
+    </header>
     <body>
         <footer>
             <p>Contact Us: yumetreat@gmail.com</p>
