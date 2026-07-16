@@ -19,7 +19,7 @@
 
     <!-- Left -->
     <div class="header-left">
-        <a href="#">
+        <a href="navbar.php">
             <i class="fa-solid fa-bars"></i>
         </a>
     </div>
