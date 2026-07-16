@@ -22,10 +22,9 @@
         <div class="hero-image">
         <img src="image/hero/yume.png" alt="Hero image ">
         </div>
-        </div>
     </section>
 
-    <section class="category">
+    <section id="category" class="category">
         <h1>SHOP BY CATEGORY</h1>
         <div class="grid">
         <a href="category.php?type=chocolate" class="category-item chocolate">
