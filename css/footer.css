@@ -1,6 +1,12 @@
-body {
-    background-color: #fdc5ce;
-    color: black;
-    font-family: "Times New Roman", Times, Georgia, serif;
+footer {
+    background-color: #fdc5ce; /* The light pink background */
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-family: "Times New Roman", Times, Georgia, serif; 
     font-size: 14px;
+    color: #333333;
+    margin: 5px 0; 
 }
