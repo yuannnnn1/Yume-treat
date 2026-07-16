@@ -121,7 +121,7 @@
         
         <div class="menu-links">
             <a href="login.php" class="menu-item">LOGIN/REGISTER</a>
-            <a href="main.php#category" class="menu-item" id="category-link">CATEGORY</a>
+            <a href="index.php#category" class="menu-item" id="category-link">CATEGORY</a>
             <a href="cart.php" class="menu-item">CART</a>
             <a href="orders.php" class="menu-item">ORDER HISTORY</a>
         </div>
