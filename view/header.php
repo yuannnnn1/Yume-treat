@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* 1. 侧边栏基础容器：默认完全隐藏 */
         .side-menu {
             position: fixed;
             top: 0;
@@ -23,13 +22,11 @@
             pointer-events: none;
         }
 
-        /* 激活状态 */
         .side-menu.active {
             visibility: visible;
             pointer-events: auto;
         }
 
-        /* 2. 遮罩层：仅提供点击关闭区域，不设背景色 */
         .menu-overlay {
             position: absolute;
             top: 0;
@@ -38,25 +35,23 @@
             height: 100%;
         }
 
-        /* 3. 菜单内容滑出定位：去除背景色、阴影等所有视觉样式 */
         .menu-content {
             position: absolute;
             top: 0;
             left: 0;
-            width: 280px; /* 设定一个基础宽度 */
+            width: 280px; 
             height: 100%;
             transform: translateX(-100%);
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
-            background: #fff; /* 仅保留一个基础白底，确保文字可见 */
+            background: #fff; 
         }
         
         .side-menu.active .menu-content {
             transform: translateX(0);
         }
 
-        /* 4. 内部排版基础布局（无装饰性样式） */
         .menu-header {
             display: flex;
             justify-content: space-between;
@@ -74,10 +69,9 @@
         .menu-item {
             display: block;
             text-decoration: none;
-            color: inherit; /* 继承父级文字颜色 */
+            color: inherit;
         }
 
-        /* 页面平滑滚动 */
         html {
             scroll-behavior: smooth;
         }
