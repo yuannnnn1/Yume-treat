@@ -28,27 +28,27 @@
     <section class="category">
         <h1>SHOP BY CATEGORY</h1>
         <div class="grid">
-        <a href="category/chocolate.php" class="category-item chocolate">
+        <a href="category.php?type=chocolate" class="category-item chocolate">
             <img src="image/category/chocolate.jpg" alt="Chocolate">
             <p>Chocolate</p>
         </a>
         
-        <a href="category/traditional.php" class="category-item trandition">
+        <a href="category.php?type=tradition" class="category-item trandition">
             <img src="image/category/traditional.jpg" alt="Traditional Sweets">
             <p>Traditional Sweets</p>
         </a>
         
-        <a href="category/snacks.php" class="category-item snacks">
+        <a href="category.php?type=snack" class="category-item snacks">
             <img src="image/category/snacks.jpg" alt="Snacks">
             <p>Snacks</p>
         </a>
         
-        <a href="category/drinks.php" class="category-item drinks">
+        <a href="category.php?type=drink" class="category-item drinks">
             <img src="image/category/drinks.jpg" alt="Drinks">
             <p>Drinks</p>
         </a>
         
-        <a href="category/noodles.php" class="category-item noodle">
+        <a href="category.php?type=noodle" class="category-item noodle">
             <img src="image/category/noodles.jpg" alt="Instant Noodles">
             <p>Instant Noodles</p>
         </a>  
