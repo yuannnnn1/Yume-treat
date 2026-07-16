@@ -1,7 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Takes up the full height of the viewport */
+}
+
 footer {
-    background-color: #fdc5ce; /* The light pink background */
+    background-color: #fdc5ce;
     padding: 20px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer p {

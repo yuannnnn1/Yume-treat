@@ -1,0 +1,78 @@
+body {
+    background-color: #effdfd;
+    margin: 0;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+section {
+    background-color: #ffeec2;
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px; 
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 25px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    flex: 1;
+    background-color: #fdc5ce;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 10px;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #fbaec1;
+}
