@@ -67,6 +67,9 @@ try {
                </form>
             </div>
         <?php endforeach; ?>
+        <?php else : ?>
+        <p>No products found in this category.</p>
+    <?php endif; ?>
     </section>
 </main>
 <?php include 'view/footer.php'; ?>
