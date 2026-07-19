@@ -1,0 +1,133 @@
+/* ==========================================================================
+   多级面包屑导航 (Breadcrumbs)
+   ========================================================================== */
+.breadcrumbs {
+    padding: 15px 20px 5px 20px;
+    font-size: 0.75rem;
+    font-family: 'Georgia', serif;
+}
+
+.breadcrumbs a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumbs .separator {
+    margin: 0 3px;
+    color: #999;
+}
+
+.breadcrumbs .current {
+    color: #333;
+}
+
+/* ==========================================================================
+   商品详情容器 (限制居中最大宽度，完美适配手机端比例)
+   ========================================================================== */
+.product-detail {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px 20px 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 商品主图区 */
+.product-image {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain; /* 确保商品图展示完全不被裁剪 */
+}
+
+/* 商品大标题 */
+.product-detail h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+/* ==========================================================================
+   价格与库存区域 (左对齐)
+   ========================================================================== */
+.product-info {
+    text-align: left;
+    margin-bottom: 25px;
+    padding-left: 10px; /* 轻微留白，对齐下方卡片文字 */
+}
+
+.product-info p {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    color: #333;
+    margin: 6px 0;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   描述区域 (Figma 标志性的淡黄色圆角卡片)
+   ========================================================================== */
+.product-description {
+    background-color: #fdf3d0; /* Figma 效果图中的淡黄色底色 */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* DESCRIPTION: 小标题 */
+.product-description h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: #333;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+/* 描述详情文本 */
+.product-description p {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ==========================================================================
+   加入购物车表单与按钮 (满宽浅紫色卡片按钮)
+   ========================================================================== */
+.add-to-cart-form {
+    width: 100%;
+}
+
+.btn-add-cart {
+    width: 100%;
+    background-color: #f3e6f8; /* Figma 标志性的浅紫粉色 */
+    border: 1px solid #e1cfea;
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+}
+
+.btn-add-cart:hover {
+    background-color: #ebd3f5; /* 鼠标悬停加深 */
+}

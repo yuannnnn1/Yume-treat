@@ -1,25 +1,21 @@
 <?php
 $host = '172.21.82.206';
 $dbname = 'group12'; 
-$username = 'group12';    
-$password = '9503';         
+$username = 'group12';$password = '9503';         
 
 try {
-    
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Error: " . $e->getMessage());
 }
 
-
-$category = isset($_GET['type']) ? $_GET['type'] : 'chocolate';
+$category = isset($_GET['type']) ?$_GET['type'] : 'chocolate';
 
 try {
-    $stmt = $pdo->prepare("SELECT * FROM product_list WHERE category = :category");
-    $stmt->execute(['category' => $category]);
+    $stmt =$pdo->prepare("SELECT * FROM product_list WHERE category = :category");
+    $stmt->execute(['category' =>$category]);
     
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $products =$stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Error" . $e->getMessage());
 }
@@ -31,10 +27,10 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars(ucfirst($category)); ?> - YUME TREAT</title>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/category.css"> 
 </head>
 
 <body>
@@ -50,28 +46,37 @@ try {
         <span class="current"><?php echo htmlspecialchars($category); ?></span>
     </nav>
 
-    <h1><?php echo htmlspecialchars(ucfirst($category)); ?></h1>
+    <div class="category-title-container">
+        <h1><?php echo htmlspecialchars(ucfirst($category)); ?></h1>
+    </div>
     
-    <section id="product" class="product">
+    <section id="product" class="product-grid">
     <?php if (count($products) > 0) : ?>
-        <?php foreach ($products as $product) : ?>
-            <div>
-               <img src="image/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+        <?php foreach ($products as$product) : ?>
+            <div class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="image/product/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+               </div>
                <p><?php echo htmlspecialchars($product['name']); ?></p>
                
-               <a href="product.php?id=<?php echo $product['id']; ?>"><button>SEE MORE</button></a>
-               
-               <form action="cart.php" method="POST" style="display:inline;">
-                   <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
-                   <button type="submit">ADD</button>
-               </form>
+               <div class="product-actions">
+                   <a href="product.php?id=<?php echo $product['id']; ?>">
+                       <button type="button">SEE MORE</button>
+                   </a>
+                   
+                   <form action="cart.php" method="POST">
+                       <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                       <button type="submit">ADD</button>
+                   </form>
+               </div>
             </div>
         <?php endforeach; ?>
-        <?php else : ?>
-        <p>No products found in this category.</p>
+    <?php else : ?>
+        <p class="no-products">No products found in this category.</p>
     <?php endif; ?>
     </section>
 </main>
+
 <?php include 'view/footer.php'; ?>
 </body>
 </html>

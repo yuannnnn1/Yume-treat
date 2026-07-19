@@ -1,0 +1,137 @@
+/* ==========================================================================
+   面包屑导航 (Breadcrumbs)
+   ========================================================================== */
+.breadcrumbs {
+    padding: 15px 20px 5px 20px;
+    font-size: 0.75rem;
+    font-family: 'Georgia', serif;
+}
+
+.breadcrumbs a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumbs .separator {
+    margin: 0 3px;
+    color: #999;
+}
+
+.breadcrumbs .current {
+    color: #333;
+}
+
+/* ==========================================================================
+   分类标题 (带浅粉紫色边框盒)
+   ========================================================================== */
+.category-title-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 25px 0;
+}
+
+.category-title-container h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #333;
+    background-color: #f3e6f8; /* 浅紫粉色内衬 */
+    border: 1px solid #e1cfea;
+    padding: 12px 40px;
+    margin: 0;
+    border-radius: 4px;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   商品列表网格布局 (两列)
+   ========================================================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 严格的两列布局 */
+    gap: 15px;
+    padding: 0 15px 30px 15px;
+    max-width: 500px; /* 限制最大宽度，适配示意图手机端比例 */
+    margin: 0 auto;
+}
+
+/* 商品卡片外框 */
+.product-card {
+    background-color: #f3e6f8; /* 浅紫色背景卡片 */
+    border: 1px solid #e1cfea;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* 商品图片容器 */
+.product-image-wrapper {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 强制正方形图片 */
+    object-fit: cover;
+}
+
+/* 商品名称 */
+.product-card p {
+    font-family: 'Georgia', serif;
+    font-size: 0.8rem;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   操作按钮区 (SEE MORE & ADD 并排)
+   ========================================================================== */
+.product-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto; /* 将按钮推至卡片底部对齐 */
+}
+
+/* 让按钮在容器中平分宽度 */
+.product-actions a,
+.product-actions form {
+    flex: 1;
+    display: block;
+}
+
+.product-actions button {
+    width: 100%;
+    background-color: #fff; /* 白色按钮背景 */
+    border: 1px solid #f2e3f7;
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-size: 0.75rem;
+    padding: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.product-actions button:hover {
+    background-color: #ebd3f5; /* 悬停微紫 */
+}
+
+/* 提示信息样式 */
+.no-products {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #666;
+    grid-column: span 2;
+    padding: 40px 0;
+}

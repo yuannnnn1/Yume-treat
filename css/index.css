@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Hero Banner 区域
+   ========================================================================== */
+.hero {
+    padding: 15px 15px 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px; /* 限制最大宽度，适配示意图的手机/移动端比例 */
+    border: 1px solid #c9a4aa;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   SHOP BY CATEGORY 分类区域
+   ========================================================================== */
+.category {
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.category h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+/* 网格布局：每行 3 列，自动换行 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* 分类卡片样式（还原浅紫色圆角边框） */
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #f3e6f8; /* 浅紫色卡片底色 */
+    border: 1px solid #e1cfea;
+    border-radius: 12px;       /* 明显的卡片圆角 */
+    padding: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.category-item:hover {
+    background-color: #ebd3f5;
+    transform: translateY(-2px);
+}
+
+/* 卡片内部的图片 */
+.category-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* 强制正方形图片 */
+    object-fit: cover;         /* 裁剪填满 */
+    border-radius: 8px;        /* 图片自带小圆角 */
+    background-color: #fff;
+}
+
+/* 卡片内部文字 */
+.category-item p {
+    margin: 6px 0 2px 0;
+    color: #333;
+    font-size: 0.75rem;       /* 稍微小一点的精致字体 */
+    font-family: 'Georgia', serif;
+    white-space: nowrap;       /* 避免文字换行影响美观 */
+}
+
+/* 移动端特殊适配：当屏幕极小时防止文字挤压 */
+@media (max-width: 360px) {
+    .grid {
+        gap: 8px;
+    }
+    .category-item p {
+        font-size: 0.7rem;
+    }
+}

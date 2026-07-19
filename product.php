@@ -25,7 +25,6 @@ try {
     $stmt->execute(['id' => $product_id]);
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    // 如果找不到该商品，提示错误
     if (!$product) {
         die("Product not found.");
     }
@@ -33,7 +32,6 @@ try {
     die("Error: " . $e->getMessage());
 }
 
-// 提取分类，用于面包屑导航，若没有则默认为 chocolate
 $category = isset($product['category']) ? $product['category'] : 'chocolate';
 ?>
 <!DOCTYPE html>
@@ -44,7 +42,9 @@ $category = isset($product['category']) ? $product['category'] : 'chocolate';
     <title><?php echo htmlspecialchars($product['name']); ?> - YUME TREAT</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/product.css"> 
 </head>
 
 <body>
@@ -64,7 +64,7 @@ $category = isset($product['category']) ? $product['category'] : 'chocolate';
 
     <section class="product-detail">
         <div class="product-image">
-            <img src="image/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+            <img src="image/product/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
         </div>
 
         <h1><?php echo htmlspecialchars($product['name']); ?></h1>

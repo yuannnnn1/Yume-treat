@@ -5,77 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YUME TREAT</title>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        .side-menu.active {
-            visibility: visible;
-            pointer-events: auto;
-        }
-
-        .menu-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .menu-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 280px; 
-            height: 100%;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            background: #fff; 
-        }
-        
-        .side-menu.active .menu-content {
-            transform: translateX(0);
-        }
-
-        .menu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-        }
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            padding: 15px;
-        }
-
-        .menu-item {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
@@ -95,7 +29,6 @@
         <a href="search.php">
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
-
         <a href="cart.php">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
