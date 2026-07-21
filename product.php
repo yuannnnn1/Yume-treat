@@ -79,7 +79,10 @@ $category = isset($product['category']) ? $product['category'] : 'chocolate';
             <p><?php echo htmlspecialchars($product['description']); ?></p>
         </div>
         
-        <a href="cart.php?action=add&product_id=<?php echo $product['product_id']; ?>" class="btn">ADD</a>
+        <form action="cart.php" method="POST" class="add-to-cart-form">
+            <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
+            <button type="submit" class="btn-add-cart">ADD TO CART</button>
+        </form>
     </section>
 </main>
 

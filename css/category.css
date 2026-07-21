@@ -1,5 +1,5 @@
 /* ==========================================================================
-   面包屑导航 (Breadcrumbs)
+   面包屑与标题
    ========================================================================== */
 .breadcrumbs {
     padding: 15px 20px 5px 20px;
@@ -9,23 +9,10 @@
     margin: 0 auto;
 }
 
-.breadcrumbs a {
-    color: #666;
-    text-decoration: none;
-}
+.breadcrumbs a { color: #666; text-decoration: none; }
+.breadcrumbs .separator { margin: 0 3px; color: #999; }
+.breadcrumbs .current { color: #333; }
 
-.breadcrumbs .separator {
-    margin: 0 3px;
-    color: #999;
-}
-
-.breadcrumbs .current {
-    color: #333;
-}
-
-/* ==========================================================================
-   分类标题 (带浅粉紫色边框盒)
-   ========================================================================== */
 .category-title-container {
     display: flex;
     justify-content: center;
@@ -37,7 +24,7 @@
     font-size: 1.6rem;
     font-weight: normal;
     color: #333;
-    background-color: #f3e6f8; /* 浅紫粉色内衬 */
+    background-color: #f3e6f8;
     border: 1px solid #e1cfea;
     padding: 12px 40px;
     margin: 0;
@@ -47,23 +34,21 @@
 }
 
 /* ==========================================================================
-   商品列表网格布局 (自适应页面宽度)
+   商品列表网格布局 (留白后平分剩余宽度)
    ========================================================================== */
 .product-grid {
     display: grid;
-    /* 大屏及中等屏下按 180px 最小尺寸自动铺满，窄屏下自动调整为 2 列 */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    grid-template-columns: repeat(4, 1fr); /* 大屏 4 列均分 */
     gap: 15px;
     padding: 0 15px 30px 15px;
-    max-width: 1200px; /* 控制大屏下最大宽度，自适应居中 */
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* 商品卡片外框 */
 .product-card {
-    background-color: #f3e6f8; /* 浅紫色背景卡片 */
+    background-color: #f3e6f8;
     border: 1px solid #e1cfea;
     border-radius: 12px;
     padding: 12px;
@@ -71,10 +56,9 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    height: 100%;
+    width: 100%;
 }
 
-/* 商品图片容器 */
 .product-image-wrapper {
     width: 100%;
     background-color: #fff;
@@ -85,11 +69,10 @@
 
 .product-card img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 强制正方形图片 */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
-/* 商品名称 */
 .product-card p {
     font-family: 'Georgia', serif;
     font-size: 0.85rem;
@@ -100,41 +83,46 @@
 }
 
 /* ==========================================================================
-   操作按钮区 (SEE MORE & ADD 并排)
+   统一按钮样式 (.btn-yellow)
    ========================================================================== */
 .product-actions {
     display: flex;
     gap: 8px;
     width: 100%;
-    margin-top: auto; /* 将按钮推至卡片底部对齐 */
+    margin-top: auto;
 }
 
-/* 让按钮在容器中平分宽度 */
-.product-actions a,
-.product-actions form {
+.product-actions a {
     flex: 1;
     display: block;
+    text-decoration: none;
 }
 
-.product-actions button {
+/* 核心：淡黄色统一按钮样式 */
+.btn-yellow {
+    appearance: none;
+    -webkit-appearance: none;
     width: 100%;
-    background-color: #fdf3d0; /* 修改为与 product description 相同的淡黄色 */
-    border: 1px solid #eedf9b;  /* 配套淡黄色边框 */
-    color: #333;
+    display: block;
+    background-color: #fdf3d0 !important; /* 与 product description 一致的淡黄 */
+    border: 1px solid #eedf9b !important;  /* 匹配边框 */
+    color: #333333 !important;             /* 避免默认蓝色文字 */
     font-family: 'Georgia', serif;
     font-size: 0.75rem;
     padding: 8px 0;
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
     transition: background-color 0.2s;
     letter-spacing: 0.5px;
 }
 
-.product-actions button:hover {
-    background-color: #f1e4b3; /* 悬停微黄 */
+.btn-yellow:hover {
+    background-color: #f1e4b3 !important;
 }
 
-/* 提示信息样式 */
 .no-products {
     text-align: center;
     font-family: 'Georgia', serif;
@@ -143,10 +131,10 @@
     padding: 40px 0;
 }
 
-/* 移动端/极小屏幕自适应优化 */
-@media (max-width: 480px) {
+/* 移动端适配：2 列均分 */
+@media (max-width: 768px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 小屏/手机端维持 2 列 */
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 0 10px 20px 10px;
     }

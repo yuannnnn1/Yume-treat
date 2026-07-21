@@ -62,10 +62,12 @@ try {
                 
                 <div class="product-actions">
                     <a href="product.php?id=<?php echo $product['product_id']; ?>">
-                        <button type="button">SEE MORE</button>
+                        <button type="button" class="btn-yellow">SEE MORE</button>
                     </a>
                     
-                    <a href="auth/cart.php?action=add&product_id=<?php echo $product['product_id']; ?>&type=<?php echo urlencode($category); ?>" class="btn">ADD</a>
+                    <a href="auth/cart.php?action=add&product_id=<?php echo $product['product_id']; ?>&type=<?php echo urlencode($category); ?>">
+                        <button type="button" class="btn-yellow">ADD</button>
+                    </a>
                 </div>
                 </div>
             <?php endforeach; ?>
