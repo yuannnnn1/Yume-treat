@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background-color: #f6cbd1; /* Figma 示意图中的粉色背景 */
+    background-color: #fdc5ce; /* Figma 示意图中的粉色背景 */
     border-bottom: 1px solid #dcb0b7;
 }
 
@@ -25,7 +25,7 @@
     font-weight: 500;
     text-decoration: none;
     letter-spacing: 1px;
-    font-family: 'Georgia', serif; /* 还原图中的衬线体风格 */
+    font-family: "Times New Roman", Times, Georgia, serif; /* 还原图中的衬线体风格 */
 }
 
 .header-right {
@@ -40,8 +40,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4fafb; /* 还原图中淡淡的青蓝色背景 */
-    font-family: Arial, sans-serif;
+    background-color: #effdfd;; /* 还原图中淡淡的青蓝色背景 */
+    font-family: "Times New Roman", Times, Georgia, serif;
 }
 
 /* ==========================================================================
@@ -82,7 +82,7 @@ body {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    background: #f4fafb; /* 侧边栏背景与主背景保持一致 */
+    background: #effdfd; /* 侧边栏背景与主背景保持一致 */
 }
 
 .side-menu.active .menu-content {
@@ -94,8 +94,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #f6cbd1; /* 侧边栏顶部也是粉色 */
-    font-family: 'Georgia', serif;
+    background-color: #fdc5ce; /* 侧边栏顶部也是粉色 */
+    font-family: "Times New Roman", Times, Georgia, serif;
     font-size: 1.1rem;
     color: #333;
 }
@@ -125,7 +125,7 @@ body {
     border: 1px solid #e1cfea;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    font-family: 'Georgia', serif;
+    font-family: "Times New Roman", Times, Georgia, serif;
     transition: background-color 0.2s;
 }
 
