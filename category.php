@@ -65,10 +65,7 @@ try {
                         <button type="button">SEE MORE</button>
                     </a>
                     
-                    <form action="cart.php" method="POST">
-                        <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
-                        <button type="submit">ADD</button>
-                    </form>
+                    <a href="auth/cart.php?action=add&product_id=<?php echo $product['product_id']; ?>&type=<?php echo urlencode($category); ?>" class="btn">ADD</a>
                 </div>
                 </div>
             <?php endforeach; ?>
