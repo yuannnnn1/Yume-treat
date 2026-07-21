@@ -21,7 +21,7 @@ if ($product_id <= 0) {
 
 // 3. 从数据库查询对应的商品详情
 try {
-    $stmt = $pdo->prepare("SELECT * FROM product_list WHERE id = :id");
+    $stmt = $pdo->prepare("SELECT * FROM product_list WHERE product_id = :id");
     $stmt->execute(['id' => $product_id]);
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
     
@@ -64,13 +64,13 @@ $category = isset($product['category']) ? $product['category'] : 'chocolate';
 
     <section class="product-detail">
         <div class="product-image">
-            <img src="image/product/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+            <img src="image/product/<?php echo htmlspecialchars($product['product_name']); ?>.jpeg" alt="<?php echo htmlspecialchars($product['name']); ?>">
         </div>
 
         <h1><?php echo htmlspecialchars($product['name']); ?></h1>
         
         <div class="product-info">
-            <p class="price">PRICE: ¥<?php echo htmlspecialchars($product['price']); ?></p>
+            <p class="price">PRICE: ¥<?php echo htmlspecialchars($product['price_yen']); ?></p>
             <p class="stock">STOCK: <?php echo htmlspecialchars($product['stock']); ?></p>
         </div>
         

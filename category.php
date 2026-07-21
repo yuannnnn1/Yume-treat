@@ -49,31 +49,32 @@ try {
     <div class="category-title-container">
         <h1><?php echo htmlspecialchars(ucfirst($category)); ?></h1>
     </div>
-    
     <section id="product" class="product-grid">
-    <?php if (count($products) > 0) : ?>
-        <?php foreach ($products as$product) : ?>
-            <div class="product-card">
-               <div class="product-image-wrapper">
-                   <img src="image/product/<?php echo htmlspecialchars($product['product_name']); ?>.jpeg" alt="<?php echo htmlspecialchars($product['name']); ?>">
-               </div>
-               <p><?php echo htmlspecialchars($product['product_name']); ?></p>
-               
-               <div class="product-actions">
-                   <a href="product.php?id=<?php echo $product['product_id']; ?>">
-                       <button type="button">SEE MORE</button>
-                   </a>
-                   
-                   <form action="cart.php" method="POST">
-                       <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
-                       <button type="submit">ADD</button>
-                   </form>
-               </div>
-            </div>
-        <?php endforeach; ?>
-    <?php else : ?>
-        <p class="no-products">No products found in this category.</p>
-    <?php endif; ?>
+        <?php if (count($products) > 0) : ?>
+            <?php foreach ($products as $product) : ?>
+                <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="image/product/<?php echo htmlspecialchars($product['product_name']); ?>.jpeg" 
+                            alt="<?php echo htmlspecialchars($product['product_name']); ?>">
+                </div>
+                
+                <p><?php echo htmlspecialchars($product['product_name']); ?></p>
+                
+                <div class="product-actions">
+                    <a href="product.php?id=<?php echo $product['product_id']; ?>">
+                        <button type="button">SEE MORE</button>
+                    </a>
+                    
+                    <form action="cart.php" method="POST">
+                        <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
+                        <button type="submit">ADD</button>
+                    </form>
+                </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <p class="no-products">No products found in this category.</p>
+        <?php endif; ?>
     </section>
 </main>
 
