@@ -67,7 +67,7 @@
             <?php endif; ?>
 
             <form action="login.php" method="POST">
-                <input type="hidden" name="redirect_to" value="main.php">
+                <input type="hidden" name="redirect_to" value="index.php">
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
