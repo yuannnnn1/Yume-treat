@@ -26,10 +26,10 @@
     </div>
 
     <div class="header-right">
-        <a href="../search.php">
+        <a href="search.php">
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
-        <a href="../auth/cart.php">
+        <a href="auth/cart.php">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
@@ -47,10 +47,10 @@
         </div>
         
         <div class="menu-links">
-            <a href="../login.php" class="menu-item">LOGIN/REGISTER</a>
-            <a href="../index.php#category" class="menu-item" id="category-link">CATEGORY</a>
-            <a href="../auth/cart.php" class="menu-item">CART</a>
-            <a href="../auth/orders.php" class="menu-item">ORDER HISTORY</a>
+            <a href="login.php" class="menu-item">LOGIN/REGISTER</a>
+            <a href="index.php#category" class="menu-item" id="category-link">CATEGORY</a>
+            <a href="auth/cart.php" class="menu-item">CART</a>
+            <a href="auth/orders.php" class="menu-item">ORDER HISTORY</a>
         </div>
     </div>
 </div>
