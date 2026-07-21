@@ -55,17 +55,17 @@ try {
         <?php foreach ($products as$product) : ?>
             <div class="product-card">
                <div class="product-image-wrapper">
-                   <img src="image/product/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                   <img src="image/product/<?php echo htmlspecialchars($product['product_name']); ?>.jpeg" alt="<?php echo htmlspecialchars($product['name']); ?>">
                </div>
-               <p><?php echo htmlspecialchars($product['name']); ?></p>
+               <p><?php echo htmlspecialchars($product['product_name']); ?></p>
                
                <div class="product-actions">
-                   <a href="product.php?id=<?php echo $product['id']; ?>">
+                   <a href="product.php?id=<?php echo $product['product_id']; ?>">
                        <button type="button">SEE MORE</button>
                    </a>
                    
                    <form action="cart.php" method="POST">
-                       <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                       <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
                        <button type="submit">ADD</button>
                    </form>
                </div>
