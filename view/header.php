@@ -63,7 +63,7 @@ if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['
         
         <div class="menu-links">
             <?php if ($is_logged_in): ?>
-                <a href="<?php echo $base_url; ?>../logout.php" class="menu-item">LOGOUT</a>
+                <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGOUT</a>
             <?php else: ?>
                 <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGIN/REGISTER</a>
             <?php endif; ?>
