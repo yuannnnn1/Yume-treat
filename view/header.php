@@ -1,3 +1,6 @@
+<?php
+$base_url = '/Yume-treat/'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +25,11 @@
     </div>
 
     <div class="header-logo">
-        <a href="../index.php">YUME TREAT</a>
+        <a href="<?php echo $base_url; ?>index.php">YUME TREAT</a>
     </div>
 
     <div class="header-right">
-        <a href="../auth/cart.php">
+        <a href="<?php echo $base_url; ?>auth/cart.php">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
@@ -44,10 +47,10 @@
         </div>
         
         <div class="menu-links">
-            <a href="../login.php" class="menu-item">LOGIN/REGISTER</a>
-            <a href="../index.php#category" class="menu-item" id="category-link">CATEGORY</a>
-            <a href="../auth/cart.php" class="menu-item">CART</a>
-            <a href="../auth/history.php" class="menu-item">ORDER HISTORY</a>
+            <a href="<?php echo $base_url; ?>login.php" class="menu-item">LOGIN/REGISTER</a>
+            <a href="<?php echo $base_url; ?>index.php#category" class="menu-item" id="category-link">CATEGORY</a>
+            <a href="<?php echo $base_url; ?>auth/cart.php" class="menu-item">CART</a>
+            <a href="<?php echo $base_url; ?>auth/history.php" class="menu-item">ORDER HISTORY</a>    
         </div>
     </div>
 </div>

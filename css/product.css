@@ -31,7 +31,7 @@
    ========================================================================== */
 .product-detail {
     width: 100%;
-    max-width: 500px; /* 控制容器最大宽度，保持第一张图精致紧凑的视觉效果 */
+    max-width: 500px; /* 控制容器最大宽度，保持精致紧凑的视觉效果 */
     margin: 20px auto 40px auto; /* 上下留空，整体水平居中 */
     padding: 0 20px; 
     box-sizing: border-box;
@@ -88,7 +88,7 @@
 
 /* 描述卡片（淡黄色圆角框） */
 .product-description {
-    background-color: #fff9d9; /* 匹配图一的淡黄底色 */
+    background-color: #fff9d9; /* 匹配淡黄底色 */
     border: 1px solid #f2e2b1;
     border-radius: 12px;
     padding: 20px;
@@ -115,13 +115,26 @@
 }
 
 /* ==========================================================================
-   ADD TO CART 按钮 (淡紫色满宽按钮)
+   ADD TO CART 按钮与超链接修饰
    ========================================================================== */
 .add-to-cart-form {
     width: 100%;
     display: block;
     margin: 0;
     padding: 0;
+}
+
+/* 彻底去除 a 标签的下划线与默认文字颜色 */
+.product-content a,
+.product-content a:hover,
+.product-content a:visited,
+.product-content a:active,
+.product-content a:focus {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+    width: 100%;
+    outline: none;
 }
 
 .btn-add-cart {
@@ -142,6 +155,7 @@
     outline: none;
     box-sizing: border-box;
     transition: background-color 0.2s;
+    text-decoration: none !important; /* 强制按钮文本无下划线 */
 }
 
 .btn-add-cart:hover {
