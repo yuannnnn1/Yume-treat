@@ -1,5 +1,22 @@
 <?php
-$base_url = '/Yume-treat/'; 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+$base_url = '/Yume-treat/';
+
+// Check if user is logged in
+$is_logged_in = isset($_SESSION['user']) || isset($_SESSION['user_id']);
+
+// Check if the user has an admin role across common session structures
+$is_admin = false;
+if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['user']['role'])) {
+    $is_admin = ($_SESSION['user']['role'] === 'admin');
+} elseif (isset($_SESSION['role'])) {
+    $is_admin = ($_SESSION['role'] === 'admin');
+} elseif (isset($_SESSION['user_role'])) {
+    $is_admin = ($_SESSION['user_role'] === 'admin');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,9 +26,7 @@ $base_url = '/Yume-treat/';
     <title>YUME TREAT</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
     <link rel="stylesheet" href="css/style.css">
-    
     <link rel="stylesheet" href="css/header.css">
 </head>
 
@@ -47,10 +62,19 @@ $base_url = '/Yume-treat/';
         </div>
         
         <div class="menu-links">
-            <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGIN/REGISTER</a>
+            <?php if ($is_logged_in): ?>
+                <a href="<?php echo $base_url; ?>../logout.php" class="menu-item">LOGOUT</a>
+            <?php else: ?>
+                <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGIN/REGISTER</a>
+            <?php endif; ?>
+
             <a href="<?php echo $base_url; ?>../index.php#category" class="menu-item" id="category-link">CATEGORY</a>
             <a href="<?php echo $base_url; ?>../auth/cart.php" class="menu-item">CART</a>
-            <a href="<?php echo $base_url; ?>../auth/history.php" class="menu-item">ORDER HISTORY</a>    
+            <a href="<?php echo $base_url; ?>../auth/history.php" class="menu-item">ORDER HISTORY</a>
+
+            <?php if ($is_admin): ?>
+                <a href="<?php echo $base_url; ?>../auth/admin.php" class="menu-item admin-link">ADMIN DASHBOARD</a>
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -63,19 +87,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const sideMenu = document.getElementById('side-menu');
     const categoryLink = document.getElementById('category-link');
 
-    // 打开菜单
     menuToggle.addEventListener('click', function(e) {
         e.preventDefault();
         sideMenu.classList.add('active');
     });
 
-    // 关闭菜单
     function closeMenu() {
         sideMenu.classList.remove('active');
     }
 
     menuClose.addEventListener('click', closeMenu);
     menuOverlay.addEventListener('click', closeMenu);
-    categoryLink.addEventListener('click', closeMenu);
+    if (categoryLink) {
+        categoryLink.addEventListener('click', closeMenu);
+    }
 });
 </script>
