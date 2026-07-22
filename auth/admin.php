@@ -91,7 +91,7 @@ $products = $products_stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tbody>
                     <?php foreach ($products as $product): ?>
                         <tr>
-                            <form method="POST" action="admin_products.php">
+                            <form method="POST" action="admin.php">
                                 <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
                                 
                                 <td><strong>#<?php echo $product['product_id']; ?></strong></td>
