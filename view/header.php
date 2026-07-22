@@ -1,5 +1,10 @@
 <?php
 if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+    // Force session cookie to be valid across all directories (/auth/, root, etc.)
+    session_set_cookie_params([
+        'path' => '/',
+        'httponly' => true
+    ]);
     session_start();
 }
 
