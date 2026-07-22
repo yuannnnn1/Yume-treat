@@ -59,7 +59,7 @@ $category = isset($product['category']) ? $product['category'] : 'chocolate';
         <span class="separator">&gt;</span>
         <a href="category.php?type=<?php echo urlencode($category); ?>"><?php echo htmlspecialchars($category); ?></a>
         <span class="separator">&gt;</span>
-        <span class="current"><?php echo htmlspecialchars($product['name']); ?></span>
+        <span class="current"><?php echo htmlspecialchars($product['product_name']); ?></span>
     </nav>
 
     <section class="product-detail">
