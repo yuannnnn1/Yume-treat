@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /Yume-treat/group12/login.php");
+    header("Location: /group12/Yume-treat/login.php");
     exit();
 }
 
