@@ -1,7 +1,5 @@
 <?php
     session_start();
-
-    include 'view/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
