@@ -83,3 +83,12 @@ input[type="password"] {
 .btn:hover {
     background-color: #fbaec1;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
