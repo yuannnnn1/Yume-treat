@@ -1,0 +1,101 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eafaf7;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.history-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1; /* Pushes footer down when content is short */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.history-container h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #222222;
+    font-weight: normal;
+}
+
+.history-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.history-card {
+    background-color: #f0e6f6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.history-card-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.history-image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.history-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.history-title-qty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.history-title-qty h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #111111;
+    font-weight: normal;
+}
+
+.history-qty {
+    font-size: 24px;
+    color: #333333;
+}
+
+.history-card-bottom {
+    margin-top: 15px;
+}
+
+.order-date {
+    margin: 0;
+    font-size: 14px;
+    color: #444444;
+}
+
+.empty-history {
+    font-size: 18px;
+    color: #666;
+    margin-top: 40px;
+}
