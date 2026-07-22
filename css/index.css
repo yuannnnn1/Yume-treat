@@ -1,17 +1,12 @@
-/* ==========================================================================
-   基础容器设置 (确保整体最大宽度并留出安全边距)
-   ========================================================================== */
+
 main {
     width: 100%;
-    max-width: 1200px; /* 大屏下最大宽度 */
+    max-width: 1200px; 
     margin: 0 auto;
-    padding: 0 15px;   /* 左右保留内边距留白 */
+    padding: 0 15px;   
     box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Hero Banner 区域 (铺满扣除 padding 后的剩余宽度)
-   ========================================================================== */
 .hero {
     width: 100%;
     padding-top: 15px;
@@ -19,7 +14,7 @@ main {
 }
 
 .hero-image {
-    width: 100%;       /* 强制占满剩余的全部宽度 */
+    width: 100%;       
     border: 1px solid #c9a4aa;
     border-radius: 8px;
     overflow: hidden;
@@ -34,9 +29,6 @@ main {
     object-fit: cover;
 }
 
-/* ==========================================================================
-   SHOP BY CATEGORY 分类区域
-   ========================================================================== */
 .category {
     padding: 25px 0;
     text-align: center;
@@ -53,17 +45,14 @@ main {
     font-weight: normal;
 }
 
-/* 网格：均分扣除 Gap 后的所有剩余面积 */
 .grid {
     display: grid;
-    /* 大屏默认 5 列均分，小屏按比例均分 */
     grid-template-columns: repeat(5, 1fr); 
     gap: 12px;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* 分类卡片样式 */
 .category-item {
     display: flex;
     flex-direction: column;
@@ -75,7 +64,7 @@ main {
     padding: 8px;
     transition: transform 0.2s, background-color 0.2s;
     box-sizing: border-box;
-    width: 100%; /* 填满分配到的网格单元 */
+    width: 100%;
 }
 
 .category-item:hover {
@@ -101,8 +90,6 @@ main {
     text-overflow: ellipsis;
     max-width: 100%;
 }
-
-/* 移动端响应式均分：改为 3 列排布 */
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
