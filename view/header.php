@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
     session_start();
 }
 
-$base_url = '/Yume-treat/';
+$base_url = '/group12/Yume-treat/';
 
 // Check if user is logged in
 $is_logged_in = isset($_SESSION['user']) || isset($_SESSION['user_id']);
