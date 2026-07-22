@@ -26,9 +26,6 @@
     </div>
 
     <div class="header-right">
-        <a href="../search.php">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
         <a href="../auth/cart.php">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
