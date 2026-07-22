@@ -9,6 +9,7 @@
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
+    text-align: left;
 }
 
 .breadcrumbs a {
@@ -26,99 +27,99 @@
 }
 
 /* ==========================================================================
-   商品详情容器 (全宽自适应，扣除留白后居中)
+   商品详情容器 (保持上下结构与居中)
    ========================================================================== */
 .product-detail {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px 30px 20px;
+    max-width: 500px; /* 控制容器最大宽度，保持第一张图精致紧凑的视觉效果 */
+    margin: 20px auto 40px auto; /* 上下留空，整体水平居中 */
+    padding: 0 20px; 
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column !important; /* 强制垂直排列：上图下文 */
+    align-items: center; /* 内部元素水平居中 */
 }
 
 /* 商品主图区 */
 .product-image {
     width: 100%;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .product-image img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 380px;
     object-fit: contain;
     display: block;
 }
 
-/* 商品大标题 */
-.product-detail h1 {
-    font-family: 'Georgia', serif;
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #333;
-    text-align: left;
-    margin: 10px 0 5px 0;
+/* 商品文字内容区 */
+.product-content {
+    width: 100%;
+    text-align: center; /* 标题与价格/库存文字居中显示 */
 }
 
-/* 价格与库存 */
+.product-content h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #222;
+    margin: 0 0 15px 0;
+}
+
 .product-info {
-    text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .product-info p {
     font-family: 'Georgia', serif;
     font-size: 1.1rem;
     color: #333;
-    margin: 4px 0;
+    margin: 5px 0;
     letter-spacing: 0.5px;
 }
 
-/* 描述区域 (原型淡黄色圆角卡片) */
+/* 描述卡片（淡黄色圆角框） */
 .product-description {
-    background-color: #fdf3d0; /* 淡黄色底色 */
-    border: 1px solid #eedf9b;
-    border-radius: 8px;
-    padding: 18px 20px;
-    margin-bottom: 15px;
-    text-align: left;
+    background-color: #fff9d9; /* 匹配图一的淡黄底色 */
+    border: 1px solid #f2e2b1;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left; /* 描述段落靠左排版提升阅读体验 */
     box-sizing: border-box;
 }
 
 .product-description h3 {
     font-family: 'Georgia', serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: normal;
-    color: #333;
-    margin: 0 0 8px 0;
+    color: #222;
+    margin: 0 0 10px 0;
     letter-spacing: 0.5px;
 }
 
 .product-description p {
     font-family: 'Georgia', serif;
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
     margin: 0;
 }
 
 /* ==========================================================================
-   ADD TO CART 按钮 (原型浅粉紫色满宽按钮)
+   ADD TO CART 按钮 (淡紫色满宽按钮)
    ========================================================================== */
-.add-to-cart-form,
-.btn-add-cart-link {
+.add-to-cart-form {
     width: 100%;
     display: block;
-    text-decoration: none;
     margin: 0;
     padding: 0;
 }
@@ -128,11 +129,11 @@
     -webkit-appearance: none;
     width: 100%;
     display: block;
-    background-color: #f3e6f8 !important; /* 浅粉紫色底色 */
-    border: 1px solid #e1cfea !important;  /* 配套淡紫边框 */
-    color: #333333 !important;             /* 避免变成浏览器默认蓝色 */
+    background-color: #f3e6f8 !important; /* 浅粉紫底色 */
+    border: 1px solid #e1cfea !important;  /* 匹配边框 */
+    color: #333333 !important;
     font-family: 'Georgia', serif;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 12px 0;
     border-radius: 4px;
     cursor: pointer;
@@ -145,22 +146,4 @@
 
 .btn-add-cart:hover {
     background-color: #ebd3f5 !important;
-}
-
-/* 大屏 Responsive 适配 */
-@media (min-width: 768px) {
-    .product-detail {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 30px;
-    }
-
-    .product-image {
-        flex: 1;
-        max-width: 45%;
-    }
-
-    .product-detail > *:not(.product-image) {
-        flex: 1;
-    }
 }

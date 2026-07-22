@@ -64,25 +64,27 @@ $category = isset($product['category']) ? $product['category'] : 'chocolate';
 
     <section class="product-detail">
         <div class="product-image">
-            <img src="image/product/<?php echo htmlspecialchars($product['product_name']); ?>.jpeg" alt="<?php echo htmlspecialchars($product['name']); ?>">
+            <img src="image/product/<?php echo htmlspecialchars($product['product_name']); ?>.jpeg" alt="<?php echo htmlspecialchars($product['name'] ?? ''); ?>">
         </div>
 
-        <h1><?php echo htmlspecialchars($product['name']); ?></h1>
-        
-        <div class="product-info">
-            <p class="price">PRICE: ¥<?php echo htmlspecialchars($product['price_yen']); ?></p>
-            <p class="stock">STOCK: <?php echo htmlspecialchars($product['stock']); ?></p>
+        <div class="product-content">
+            <h1><?php echo htmlspecialchars($product['product_name'] ?? 'Unkonwn Product'); ?></h1>
+            
+            <div class="product-info">
+                <p class="price">PRICE: ¥<?php echo htmlspecialchars($product['price_yen']); ?></p>
+                <p class="stock">STOCK: <?php echo htmlspecialchars($product['stock']); ?></p>
+            </div>
+            
+            <div class="product-description">
+                <h3>DESCRIPTION:</h3>
+                <p><?php echo htmlspecialchars($product['description']); ?></p>
+            </div>
+            
+            <form action="cart.php" method="POST" class="add-to-cart-form">
+                <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
+                <button type="submit" class="btn-add-cart">ADD TO CART</button>
+            </form>
         </div>
-        
-        <div class="product-description">
-            <h3>DESCRIPTION:</h3>
-            <p><?php echo htmlspecialchars($product['description']); ?></p>
-        </div>
-        
-        <form action="cart.php" method="POST" class="add-to-cart-form">
-            <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
-            <button type="submit" class="btn-add-cart">ADD TO CART</button>
-        </form>
     </section>
 </main>
 
