@@ -76,8 +76,8 @@ body {
     justify-content: center;
     width: 32px;
     height: 32px;
-    background-color: #f7a8b8;
-    color: #ffffff;
+    background-color: #fff6f7;
+    color: #000000;
     border-radius: 50%;
     text-decoration: none;
     font-weight: bold;
@@ -87,7 +87,7 @@ body {
 }
 
 .btn-qty:hover {
-    background-color: #e58d9f;
+    background-color: #ffe9ec;
     transform: scale(1.05);
 }
 
@@ -105,7 +105,7 @@ body {
     justify-content: center;
     width: 32px;
     height: 32px;
-    background-color: #ff6b6b;
+    background-color: #f7a8b8;
     color: #ffffff;
     border-radius: 50%;
     text-decoration: none;
@@ -116,7 +116,7 @@ body {
 }
 
 .btn-delete:hover {
-    background-color: #ee5253;
+    background-color: #e58d9f;
     transform: scale(1.05);
 }
 
