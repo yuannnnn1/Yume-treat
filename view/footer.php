@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Yume Treat</title>
-        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="css/footer.css">
     </head>
     <body>
 
