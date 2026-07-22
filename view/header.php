@@ -1,5 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
     session_start();
 }
 
@@ -73,7 +73,7 @@ if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['
             <a href="<?php echo $base_url; ?>../auth/history.php" class="menu-item">ORDER HISTORY</a>
 
             <?php if ($is_admin): ?>
-                <a href="<?php echo $base_url; ?>../auth/admin.php" class="menu-item admin-link">ADMIN DASHBOARD</a>
+                <a href="<?php echo $base_url; ?>../auth/admin_products.php" class="menu-item admin-link">ADMIN DASHBOARD</a>
             <?php endif; ?>
         </div>
     </div>
