@@ -1,5 +1,15 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Redirect immediately if not logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /Yume-treat/login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
 
 $host = '172.21.82.206';
 $dbname = 'group12'; 
@@ -13,13 +23,11 @@ try {
     die("Database Connection Error: " . $e->getMessage());
 }
 
-$user_id = $_SESSION['user_id'] ?? 1;
-
 $user_stmt = $pdo->prepare("SELECT user_name FROM user WHERE user_id = ?");
 $user_stmt->execute([$user_id]);
 $user_data = $user_stmt->fetch(PDO::FETCH_ASSOC);
 
-$display_name = $user_data['user_name'] ?? 'Harumi Emily';
+$display_name = $user_data['user_name'] ?? 'Valued Customer';
 
 $history_stmt = $pdo->prepare("
     SELECT 
@@ -60,8 +68,8 @@ $ordered_items = $history_stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="history-card-top">
                             <div class="history-image">
                                 <img src="../image/product/<?php echo htmlspecialchars($item['product_name']); ?>.jpeg" 
-                                    alt="<?php echo htmlspecialchars($item['product_name']); ?>"
-                                    onerror="this.onerror=null; this.src='../images/<?php echo $item['product_id']; ?>.jpg';">
+                                     alt="<?php echo htmlspecialchars($item['product_name']); ?>"
+                                     onerror="this.onerror=null; this.src='../images/<?php echo $item['product_id']; ?>.jpg';">
                             </div>
 
                             <div class="history-title-qty">
