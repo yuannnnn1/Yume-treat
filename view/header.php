@@ -44,7 +44,7 @@ if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['
     </div>
 
     <div class="header-right">
-        <a href="<?php echo $base_url; ?>../auth/cart.php">
+        <a href="<?php echo $base_url; ?>auth/cart.php">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
@@ -63,17 +63,17 @@ if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['
         
         <div class="menu-links">
             <?php if ($is_logged_in): ?>
-                <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGOUT</a>
+                <a href="<?php echo $base_url; ?>login.php" class="menu-item">LOGOUT</a>
             <?php else: ?>
-                <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGIN/REGISTER</a>
+                <a href="<?php echo $base_url; ?>login.php" class="menu-item">LOGIN/REGISTER</a>
             <?php endif; ?>
 
-            <a href="<?php echo $base_url; ?>../index.php#category" class="menu-item" id="category-link">CATEGORY</a>
-            <a href="<?php echo $base_url; ?>../auth/cart.php" class="menu-item">CART</a>
-            <a href="<?php echo $base_url; ?>../auth/history.php" class="menu-item">ORDER HISTORY</a>
+            <a href="<?php echo $base_url; ?>index.php#category" class="menu-item" id="category-link">CATEGORY</a>
+            <a href="<?php echo $base_url; ?>auth/cart.php" class="menu-item">CART</a>
+            <a href="<?php echo $base_url; ?>auth/history.php" class="menu-item">ORDER HISTORY</a>
 
             <?php if ($is_admin): ?>
-                <a href="<?php echo $base_url; ?>../auth/admin_products.php" class="menu-item admin-link">ADMIN DASHBOARD</a>
+                <a href="<?php echo $base_url; ?>auth/admin_products.php" class="menu-item admin-link">ADMIN DASHBOARD</a>
             <?php endif; ?>
         </div>
     </div>
