@@ -29,7 +29,7 @@ $base_url = '/Yume-treat/';
     </div>
 
     <div class="header-right">
-        <a href="<?php echo $base_url; ?>auth/cart.php">
+        <a href="<?php echo $base_url; ?>../auth/cart.php">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
@@ -47,10 +47,10 @@ $base_url = '/Yume-treat/';
         </div>
         
         <div class="menu-links">
-            <a href="<?php echo $base_url; ?>login.php" class="menu-item">LOGIN/REGISTER</a>
-            <a href="<?php echo $base_url; ?>index.php#category" class="menu-item" id="category-link">CATEGORY</a>
-            <a href="<?php echo $base_url; ?>auth/cart.php" class="menu-item">CART</a>
-            <a href="<?php echo $base_url; ?>auth/history.php" class="menu-item">ORDER HISTORY</a>    
+            <a href="<?php echo $base_url; ?>../login.php" class="menu-item">LOGIN/REGISTER</a>
+            <a href="<?php echo $base_url; ?>../index.php#category" class="menu-item" id="category-link">CATEGORY</a>
+            <a href="<?php echo $base_url; ?>../auth/cart.php" class="menu-item">CART</a>
+            <a href="<?php echo $base_url; ?>../auth/history.php" class="menu-item">ORDER HISTORY</a>    
         </div>
     </div>
 </div>
