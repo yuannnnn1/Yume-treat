@@ -16,7 +16,7 @@ body {
     max-width: 600px;
     margin: 40px auto;
     padding: 0 20px;
-    flex: 1; /* Pushes footer down when content is short */
+    flex: 1; 
     width: 100%;
     box-sizing: border-box;
 }

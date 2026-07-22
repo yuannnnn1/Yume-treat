@@ -1,6 +1,4 @@
-/* ==========================================================================
-   面包屑与标题
-   ========================================================================== */
+
 .breadcrumbs {
     padding: 15px 20px 5px 20px;
     font-size: 0.75rem;
@@ -33,18 +31,11 @@
     text-align: center;
 }
 
-/* ==========================================================================
-   商品列表网格布局 (留白后平分剩余宽度)
-   ========================================================================== */
-/* ==========================================================================
-   商品列表网格布局 (增加外围与内部留白)
-   ========================================================================== */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; /* 从 15px 增加到 20px，加大卡片间距 */
-    
-    /* 核心修改：增加列表两侧及下方的留白 */
+    gap: 20px; 
+
     padding: 10px 30px 40px 30px; 
     
     max-width: 1200px;
@@ -53,12 +44,11 @@
     box-sizing: border-box;
 }
 
-/* 商品卡片内部留白 */
 .product-card {
     background-color: #f3e6f8;
     border: 1px solid #e1cfea;
     border-radius: 12px;
-    padding: 16px; /* 从 12px 增加到 16px */
+    padding: 16px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,9 +79,6 @@
     word-break: break-word;
 }
 
-/* ==========================================================================
-   统一按钮样式 (.btn-yellow)
-   ========================================================================== */
 .product-actions {
     display: flex;
     gap: 8px;
@@ -105,15 +92,14 @@
     text-decoration: none;
 }
 
-/* 核心：淡黄色统一按钮样式 */
 .btn-yellow {
     appearance: none;
     -webkit-appearance: none;
     width: 100%;
     display: block;
-    background-color: #fdf3d0 !important; /* 与 product description 一致的淡黄 */
-    border: 1px solid #eedf9b !important;  /* 匹配边框 */
-    color: #333333 !important;             /* 避免默认蓝色文字 */
+    background-color: #fdf3d0 !important; 
+    border: 1px solid #eedf9b !important;  
+    color: #333333 !important;            
     font-family: 'Georgia', serif;
     font-size: 0.75rem;
     padding: 8px 0;
@@ -138,11 +124,10 @@
     padding: 40px 0;
 }
 
-/* 移动端适配 */
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: 0 16px 24px 16px; /* 移动端也保留 16px 安全边距 */
+        padding: 0 16px 24px 16px; 
     }
 }

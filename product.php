@@ -1,5 +1,5 @@
 <?php
-// 1. 数据库连接配置
+
 $host = '172.21.82.206';
 $dbname = 'group12'; 
 $username = 'group12';    
@@ -12,14 +12,12 @@ try {
     die("Error: " . $e->getMessage());
 }
 
-// 2. 获取并校验 URL 传入的商品 ID
 $product_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($product_id <= 0) {
     die("Invalid product ID.");
 }
 
-// 3. 从数据库查询对应的商品详情
 try {
     $stmt = $pdo->prepare("SELECT * FROM product_list WHERE product_id = :id");
     $stmt->execute(['id' => $product_id]);

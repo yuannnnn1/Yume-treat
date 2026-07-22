@@ -1,6 +1,5 @@
 <?php
 if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
-    // Force session cookie to be valid across all directories (/auth/, root, etc.)
     session_set_cookie_params([
         'path' => '/',
         'httponly' => true
@@ -10,10 +9,8 @@ if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
 
 $base_url = '/group12/Yume-treat/';
 
-// Check if user is logged in
 $is_logged_in = isset($_SESSION['user']) || isset($_SESSION['user_id']);
 
-// Check if the user has an admin role across common session structures
 $is_admin = false;
 if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['user']['role'])) {
     $is_admin = ($_SESSION['user']['role'] === 'admin');

@@ -1,12 +1,10 @@
-/* ==========================================================================
-   Header Navigation (全局头部导航栏)
-   ========================================================================== */
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background-color: #fdc5ce; /* Figma 示意图中的粉色背景 */
+    background-color: #fdc5ce; 
     border-bottom: 1px solid #dcb0b7;
 }
 
@@ -25,28 +23,26 @@
     font-weight: 500;
     text-decoration: none;
     letter-spacing: 1px;
-    font-family: "Times New Roman", Times, Georgia, serif; /* 还原图中的衬线体风格 */
+    font-family: "Times New Roman", Times, Georgia, serif; 
 }
 
 .header-right {
     display: flex;
-    gap: 18px; /* 搜索和购物车图标之间的间距 */
+    gap: 18px; 
 }
 
-/* 全局基础设置 */
+
 html {
     scroll-behavior: smooth;
 }
 body {
     margin: 0;
     padding: 0;
-    background-color: #effdfd;; /* 还原图中淡淡的青蓝色背景 */
+    background-color: #effdfd;; 
     font-family: "Times New Roman", Times, Georgia, serif;
 }
 
-/* ==========================================================================
-   Side Menu (侧边栏抽屉样式)
-   ========================================================================== */
+
 .side-menu {
     position: fixed;
     top: 0;
@@ -82,7 +78,7 @@ body {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    background: #effdfd; /* 侧边栏背景与主背景保持一致 */
+    background: #effdfd; 
 }
 
 .side-menu.active .menu-content {
@@ -94,7 +90,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #fdc5ce; /* 侧边栏顶部也是粉色 */
+    background-color: #fdc5ce; 
     font-family: "Times New Roman", Times, Georgia, serif;
     font-size: 1.1rem;
     color: #333;
@@ -106,7 +102,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* 侧边栏按钮 - 还原 Figma 里的紫色卡片样式 */
 .menu-links {
     display: flex;
     flex-direction: column;
@@ -118,10 +113,10 @@ body {
     display: block;
     text-decoration: none;
     color: #333;
-    background-color: #f3e6f8; /* 浅紫色背景 */
+    background-color: #f3e6f8; 
     text-align: center;
     padding: 12px;
-    border-radius: 8px; /* 圆角卡片 */
+    border-radius: 8px; 
     border: 1px solid #e1cfea;
     font-size: 0.9rem;
     letter-spacing: 1px;
